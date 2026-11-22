@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>All Dent, стоматология в Астане</title>
+<meta name="description" content="Стоматология All Dent на Мухамедханова 6а в Астане: имплантация All-on-4, All-on-6 и скуловые импланты, виниры, лечение зубов, лечение детей во сне под севораном. Бесплатная консультация, рассрочка Kaspi 0-0-24.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Tenor+Sans&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#18264A;
+  --navy-2:#24365f;
+  --marble:#F5F6F8;
+  --white:#ffffff;
+  --vein:#d9dde4;
+  --oak:#A8774C;
+  --oak-soft:#efe4d8;
+  --gold:#C7A76A;
+  --ink:#18264A;
+  --muted:#556079;
+  --line:#dfe3ea;
+  --lion:#F28C3A;
+  --giraffe:#F6C744;
+  --kids-bg:#FFF5E9;
+  --kids-ink:#3b2a1a;
+  --wa:#1FA855;
+  --wa-dark:#178a45;
+  --display:"Tenor Sans",Georgia,serif;
+  --body:"Onest",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--marble);color:var(--ink);font:17px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+section{padding:88px 0;scroll-margin-top:64px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.12;letter-spacing:.005em}
+h2{font-size:clamp(30px,4.6vw,46px);margin-bottom:16px}
+h3{font-size:22px}
+.lead{color:var(--muted);max-width:640px;font-size:18px}
+.note{font-size:14px;color:var(--muted)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 24px;border-radius:999px;font:600 16px/1 var(--body);text-decoration:none;cursor:pointer;border:0;transition:background-color .2s,color .2s,border-color .2s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:var(--wa-dark)}
+.btn-line{border:1.5px solid var(--navy);color:var(--navy);background:transparent}
+.btn-line:hover{background:var(--navy);color:#fff}
+
+/* header */
+header{position:sticky;top:0;z-index:40;background:rgba(245,246,248,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{font-family:var(--display);font-size:30px;line-height:1;color:var(--navy);position:relative;padding-bottom:4px}
+.logo-mark::after{content:"";position:absolute;left:2px;right:2px;bottom:0;height:2px;border-radius:2px;background:var(--gold)}
+.logo-name{font-family:var(--display);font-size:17px;letter-spacing:.16em;color:var(--navy)}
+.menu{display:flex;gap:24px;font-size:15px;font-weight:500}
+.menu a{text-decoration:none;color:var(--muted)}
+.menu a:hover{color:var(--navy)}
+.nav .btn{min-height:44px;padding:0 18px;font-size:15px}
+@media(max-width:960px){.menu{display:none}}
+@media(max-width:420px){.nav .btn span{display:none}.nav .btn{padding:0 13px}}
+
+/* hero */
+.hero{padding:64px 0 72px;position:relative;overflow:hidden}
+.hero-vein{position:absolute;inset:0;pointer-events:none;color:var(--vein)}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(40px,6.4vw,72px);margin-bottom:22px}
+.hero .lead{margin-bottom:30px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:34px}
+.hero-facts{display:flex;flex-wrap:wrap;gap:10px 28px;padding-top:22px;border-top:1px solid var(--line);font-size:15px;color:var(--muted)}
+.hero-facts b{display:block;font-family:var(--display);font-weight:400;font-size:26px;color:var(--navy);line-height:1.1}
+.hero-photo figcaption{margin-top:12px;font-size:14px;color:var(--muted)}
+@media(max-width:880px){.hero-grid{grid-template-columns:1fr;gap:36px}.hero{padding-top:40px}}
+
+/* before / after slider */
+.ba{position:relative;overflow:hidden;border-radius:18px;background:#e9e3df;touch-action:pan-y;user-select:none}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ba .after{clip-path:inset(0 0 0 var(--pos,50%))}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0;z-index:3}
+.ba .handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:2px;margin-left:-1px;background:#fff;z-index:2;pointer-events:none}
+.ba .handle::after{content:"";position:absolute;top:50%;left:50%;width:42px;height:42px;margin:-21px 0 0 -21px;border-radius:50%;background:var(--navy) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 6l-5 6 5 6M15 6l5 6-5 6'/%3E%3C/svg%3E") center/22px no-repeat;border:2px solid #fff}
+.ba input:focus-visible ~ .handle::after{outline:3px solid var(--gold);outline-offset:2px}
+.ba .tag{position:absolute;bottom:12px;z-index:2;padding:4px 11px;border-radius:999px;font-size:13px;font-weight:600;background:rgba(24,38,74,.78);color:#fff;pointer-events:none}
+.ba .tag.l{left:12px}.ba .tag.r{right:12px;background:rgba(255,255,255,.88);color:var(--navy)}
+
+/* offers */
+.offers{background:var(--navy);color:#fff;padding:26px 0}
+.offers ul{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.offers li{font-size:15px;color:#c9d0de;line-height:1.4}
+.offers li b{display:block;font-family:var(--display);font-weight:400;font-size:22px;color:#fff;margin-bottom:2px}
+.offers .note{color:#93a0ba;margin-top:14px;font-size:13px}
+@media(max-width:760px){.offers ul{grid-template-columns:1fr 1fr}}
+
+/* services */
+.svc{margin-top:40px;border-top:1px solid var(--line)}
+.svc-row{display:grid;grid-template-columns:260px 1fr auto;gap:28px;align-items:baseline;padding:26px 0;border-bottom:1px solid var(--line)}
+.svc-row h3{font-size:24px}
+.svc-row p{color:var(--muted)}
+.svc-row .price{font-size:15px;font-weight:600;color:var(--oak);white-space:nowrap}
+@media(max-width:760px){.svc-row{grid-template-columns:1fr;gap:6px}}
+
+/* kids */
+.kids{background:var(--kids-bg);color:var(--kids-ink);position:relative;overflow:hidden;border-radius:44px;margin:0 12px}
+.kids .wrap{position:relative}
+.kids h2{color:var(--kids-ink);font-family:var(--body);font-weight:700;font-size:clamp(32px,5vw,52px);letter-spacing:-.01em;max-width:700px}
+.kids .lead{color:#6b5640}
+.kids-blob{position:absolute;border-radius:50%;pointer-events:none}
+.kids-blob.a{width:340px;height:340px;background:var(--lion);opacity:.16;right:-90px;top:-80px}
+.kids-blob.b{width:200px;height:200px;background:var(--giraffe);opacity:.3;right:180px;top:120px}
+.kids-facts{display:flex;flex-wrap:wrap;gap:14px;margin:34px 0 54px}
+.kids-facts div{background:#fff;border-radius:22px;padding:16px 22px;font-size:15px;line-height:1.4;color:#6b5640}
+.kids-facts b{display:block;font-size:24px;color:var(--kids-ink)}
+.steps{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:34px 30px;counter-reset:s}
+.steps li{counter-increment:s;position:relative;padding-left:66px}
+.steps li::before{content:counter(s);position:absolute;left:0;top:-4px;width:50px;height:50px;border-radius:50%;display:grid;place-items:center;font:700 22px/1 var(--body);color:#fff;background:var(--lion)}
+.steps li:nth-child(even)::before{background:var(--giraffe);color:var(--kids-ink)}
+.steps h3{font-family:var(--body);font-weight:700;font-size:19px;margin-bottom:4px}
+.steps p{font-size:16px;color:#6b5640}
+@media(max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.steps{grid-template-columns:1fr}.kids{border-radius:28px;margin:0 6px}}
+.kids-cases{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:64px}
+.kids-cases figure .ba{aspect-ratio:16/9;border-radius:24px}
+.kids-cases figcaption{margin-top:10px;font-size:15px;color:#6b5640}
+@media(max-width:700px){.kids-cases{grid-template-columns:1fr}}
+.kids-quotes{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:56px}
+.kids-quotes blockquote{background:#fff;border-radius:26px;padding:26px 28px}
+.kids-quotes p.kz{font-size:17px;color:var(--kids-ink)}
+.kids-quotes p.ru{font-size:15px;color:#8a7258;margin-top:10px}
+.kids-quotes cite{display:block;font-style:normal;font-weight:600;font-size:14px;margin-top:14px;color:var(--kids-ink)}
+@media(max-width:700px){.kids-quotes{grid-template-columns:1fr}}
+.kids .btn-wa{margin-top:44px}
+
+/* works */
+.works{display:grid;grid-template-columns:repeat(6,1fr);gap:34px 28px;margin-top:44px}
+.works figure{grid-column:span 3}
+.works figure.wide{grid-column:span 6}
+.works figure.wide .ba{aspect-ratio:21/9}
+.works figure .ba{aspect-ratio:3/2}
+.works figcaption{margin-top:12px}
+.works figcaption b{display:block;font-weight:600}
+.works figcaption span{font-size:15px;color:var(--muted)}
+.works-cta{grid-column:span 3;align-self:center;padding:8px 0 8px 28px;border-left:2px solid var(--oak)}
+.works-cta h3{margin-bottom:10px}
+.works-cta p{color:var(--muted);margin-bottom:22px}
+@media(max-width:700px){.works-cta{grid-column:span 6;padding-left:20px}.works figure{grid-column:span 6}.works figure.wide .ba{aspect-ratio:16/9}}
+
+/* doctors */
+.docs{display:grid;grid-template-columns:repeat(2,1fr);gap:0 48px;margin-top:40px}
+.doc{display:grid;grid-template-columns:64px 1fr;gap:20px;padding:26px 0;border-top:1px solid var(--line)}
+.mono{width:64px;height:64px;border-radius:50%;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-family:var(--display);font-size:22px;letter-spacing:.04em}
+.doc h3{font-size:21px;margin-bottom:2px}
+.doc .role{font-weight:600;font-size:15px;color:var(--oak);margin-bottom:8px}
+.doc p{font-size:16px;color:var(--muted)}
+@media(max-width:760px){.docs{grid-template-columns:1fr}}
+
+/* reviews */
+.reviews{background:var(--white)}
+.rev-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.rev-grid{columns:3 300px;column-gap:28px;margin-top:40px}
+.rev{break-inside:avoid;margin-bottom:28px;padding:24px 0 0;border-top:2px solid var(--navy)}
+.stars{color:var(--gold);letter-spacing:2px;font-size:15px;margin-bottom:8px}
+.rev p{font-size:16px}
+.rev p.tr{color:var(--muted);font-size:15px;margin-top:8px}
+.rev cite{display:block;font-style:normal;font-size:14px;color:var(--muted);margin-top:12px}
+.rev cite b{color:var(--navy);font-weight:600}
+
+/* faq */
+.faq{max-width:820px;margin-top:34px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:22px 44px 22px 0;font-size:19px;font-weight:600;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:6px;top:50%;width:12px;height:12px;margin-top:-9px;border-right:2px solid var(--oak);border-bottom:2px solid var(--oak);transform:rotate(45deg);transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(225deg);margin-top:-3px}
+.faq details p{padding:0 0 22px;color:var(--muted);max-width:720px}
+
+/* contacts */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:36px}
+.c-list{list-style:none;display:grid;gap:18px;margin-bottom:28px}
+.c-list li span{display:block;font-size:14px;color:var(--muted)}
+.c-list a,.c-list strong{font-size:19px;font-weight:600;text-decoration:none}
+.c-list a:hover{color:var(--oak)}
+.map{border:0;width:100%;height:300px;border-radius:18px;background:var(--line)}
+form{background:var(--white);border-radius:24px;padding:32px;border:1px solid var(--line)}
+form h3{margin-bottom:6px}
+form .note{margin-bottom:22px}
+label{display:block;font-size:15px;font-weight:600;margin-bottom:6px}
+.field{margin-bottom:18px}
+input,select,textarea{width:100%;min-height:50px;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;font:16px var(--body);color:var(--ink);background:var(--marble)}
+textarea{min-height:96px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--navy);background:#fff}
+.err{display:none;color:#b3261e;font-size:14px;margin-top:6px}
+.field.bad .err{display:block}
+.field.bad input{border-color:#b3261e}
+form .btn{width:100%}
+@media(max-width:860px){.contact-grid{grid-template-columns:1fr}form{padding:24px}}
+
+footer{padding:36px 0 110px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--navy)}
+
+.wa-float{position:fixed;right:16px;bottom:16px;z-index:50;display:none;width:58px;height:58px;border-radius:50%;background:var(--wa);color:#fff;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(31,168,85,.4)}
+.wa-float svg{width:30px;height:30px}
+@media(max-width:760px){.wa-float{display:flex}}
+
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.03c-.24.68-1.42 1.3-1.95 1.38-.5.08-1.13.11-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.26-.29.58-.36.77-.36h.55c.18 0 .42-.07.65.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.19-.14.31-.29.48-.14.17-.3.38-.43.5-.14.14-.29.3-.13.59.17.29.74 1.22 1.59 1.97 1.09.97 2.01 1.27 2.3 1.41.29.14.46.12.62-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.65-.14.26.1 1.68.79 1.97.94.29.14.48.22.55.34.07.12.07.7-.17 1.38Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+</svg>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="All Dent, на главную">
+      <span class="logo-mark">AD</span>
+      <span class="logo-name">ALLDENT</span>
+    </a>
+    <nav class="menu" aria-label="Разделы">
+      <a href="#services">Услуги</a>
+      <a href="#kids">Дети во сне</a>
+      <a href="#works">Работы</a>
+      <a href="#doctors">Врачи</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a class="btn btn-wa" href="https://wa.me/77472519595" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span>Записаться</span></a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <svg class="hero-vein" viewBox="0 0 1200 700" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M-20 520 C 180 470, 260 600, 430 540 S 700 380, 860 430 S 1100 330, 1230 250" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <path d="M430 540 C 470 610, 560 640, 620 720" fill="none" stroke="currentColor" stroke-width="1"/>
+    <path d="M860 430 C 900 360, 880 280, 940 200 S 1010 90, 1060 -20" fill="none" stroke="currentColor" stroke-width="1"/>
+  </svg>
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Импланты и лечение зубов в Астане</h1>
+      <p class="lead">Ставим импланты по методикам All-on-4 и All-on-6, скуловые импланты, когда своей кости мало. Делаем виниры и протезы. Детей лечим во сне под севораном. Консультация бесплатная.</p>
+      <div class="hero-actions">
+        <a class="btn btn-wa" href="https://wa.me/77472519595?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Записаться в WhatsApp</a>
+        <a class="btn btn-line" href="tel:+77472519595"><svg aria-hidden="true"><use href="#i-phone"/></svg>+7 747 251 95 95</a>
+      </div>
+      <div class="hero-facts">
+        <div><b>10 000+</b>имплантов поставили</div>
+        <div><b>900+</b>отзывов в 2ГИС</div>
+        <div><b>Мухамедханова, 6а</b>адрес клиники</div>
+      </div>
+    </div>
+    <figure class="hero-photo">
+      <div class="ba" style="aspect-ratio:2.1/1">
+        <img src="img/implant-face-before.jpg" alt="До: на верхней челюсти нет зубов, видны установленные импланты" width="420" height="200">
+        <img class="after" src="img/implant-face-after.jpg" alt="После: на имплантах закреплён протез, ровный ряд зубов" width="430" height="200">
+        <input type="range" min="0" max="100" value="50" aria-label="Сравнить до и после">
+        <span class="handle"></span>
+        <span class="tag l">До</span><span class="tag r">После</span>
+      </div>
+      <figcaption>Протез верхней челюсти на имплантах. Врач Омаржан Алдабергенович. Потяните ползунок.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<div class="offers">
+  <div class="wrap">
+    <ul>
+      <li><b>−30%</b>на имплантацию</li>
+      <li><b>−50%</b>на американские брекеты</li>
+      <li><b>Бесплатно</b>анализы и ЭКГ перед лечением во сне</li>
+      <li><b>0-0-24</b>рассрочка через Kaspi</li>
+    </ul>
+    <p class="note">Акции из профиля клиники в Instagram. Сроки и условия уточняйте у администратора.</p>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <h2>Что мы лечим</h2>
+    <p class="lead">Точную стоимость врач посчитает на бесплатной консультации, после осмотра и снимка.</p>
+    <div class="svc">
+      <div class="svc-row">
+        <h3>Имплантация</h3>
+        <p>Одномоментная имплантация, All-on-4 и All-on-6 (вся челюсть на 4 или 6 имплантах), скуловые импланты, синус-лифтинг, наращивание кости.</p>
+        <span class="price">скидка 30%</span>
+      </div>
+      <div class="svc-row">
+        <h3>Протезы и виниры</h3>
+        <p>Коронки, протезы на имплантах, виниры, художественная реставрация передних зубов.</p>
+        <span class="price"></span>
+      </div>
+      <div class="svc-row">
+        <h3>Лечение зубов</h3>
+        <p>Кариес, пульпит, периодонтит, восстановление разрушенных зубов пломбой.</p>
+        <span class="price"></span>
+      </div>
+      <div class="svc-row">
+        <h3>Детям</h3>
+        <p>Лечение молочных зубов, в том числе во сне под севораном. Коронки на молочные зубы, подрезание уздечки.</p>
+        <span class="price">от 15 000 тг за час сна</span>
+      </div>
+      <div class="svc-row">
+        <h3>Брекеты</h3>
+        <p>Американские брекеты для выравнивания зубов и прикуса.</p>
+        <span class="price">скидка 50%</span>
+      </div>
+      <div class="svc-row">
+        <h3>Хирургия</h3>
+        <p>Удаление зубов любой сложности, пересадка своего зуба, пластика десны при её опущении.</p>
+        <span class="price"></span>
+      </div>
+      <div class="svc-row">
+        <h3>Отбеливание</h3>
+        <p>Отбеливание зубов в клинике.</p>
+        <span class="price"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kids" class="kids">
+  <span class="kids-blob a" aria-hidden="true"></span>
+  <span class="kids-blob b" aria-hidden="true"></span>
+  <div class="wrap">
+    <h2>Детские зубы лечим во сне</h2>
+    <p class="lead">Ребёнок вдыхает через маску лёгкий газ севоран и засыпает. Пока он спит, врач лечит все больные зубы за один приём, а анестезиолог следит за пульсом и дыханием на мониторе.</p>
+
+    <div class="kids-facts">
+      <div><b>15 000 тг</b>первый час лечения во сне</div>
+      <div><b>0 тг</b>анализы и ЭКГ перед сном</div>
+      <div><b>За один приём</b>все зубы, которые нужно лечить</div>
+      <div><b>Тоже во сне</b>подрезание уздечки и прокол ушей</div>
+    </div>
+
+    <ol class="steps">
+      <li><h3>Консультация и анализы</h3><p>Врач смотрит зубы, ребёнок сдаёт анализы. Всё это бесплатно.</p></li>
+      <li><h3>Анестезиолог изучает анализы</h3><p>Проверяет результаты и оценивает, можно ли ребёнку лечиться во сне.</p></li>
+      <li><h3>Подготовка в день лечения</h3><p>Анестезиолог ещё раз осматривает маленького пациента перед сном.</p></li>
+      <li><h3>Сон под севораном</h3><p>Ребёнок дышит через маску и засыпает.</p></li>
+      <li><h3>Осмотр и лечение</h3><p>Врач заново осматривает зубы, зовёт родителей, объясняет план и начинает лечить.</p></li>
+      <li><h3>Пробуждение</h3><p>Ребёнок просыпается под наблюдением врачей, рядом с мамой и папой.</p></li>
+    </ol>
+
+    <div class="kids-cases">
+      <figure>
+        <div class="ba">
+          <img src="img/kids2-before.jpg" alt="До: передние молочные зубы разрушены кариесом" loading="lazy" width="476" height="210">
+          <img class="after" src="img/kids2-after.jpg" alt="После: на передних зубах белые циркониевые коронки" loading="lazy" width="476" height="212">
+          <input type="range" min="0" max="100" value="50" aria-label="Сравнить до и после">
+          <span class="handle"></span><span class="tag l">До</span><span class="tag r">После</span>
+        </div>
+        <figcaption>Глубокий кариес и пульпит передних зубов. Поставили циркониевые коронки, они выглядят как свои зубы.</figcaption>
+      </figure>
+      <figure>
+        <div class="ba">
+          <img src="img/kids1-before.jpg" alt="До: тёмные пятна кариеса на передних зубах" loading="lazy" width="456" height="200">
+          <img class="after" src="img/kids1-after.jpg" alt="После: ровные белые коронки" loading="lazy" width="456" height="205">
+          <input type="range" min="0" max="100" value="50" aria-label="Сравнить до и после">
+          <span class="handle"></span><span class="tag l">До</span><span class="tag r">После</span>
+        </div>
+        <figcaption>Кариес у самой десны. Зубы вылечили во сне и закрыли коронками.</figcaption>
+      </figure>
+      <figure>
+        <div class="ba">
+          <img src="img/kids3-before.jpg" alt="До: сколы и кариес на верхних зубах ребёнка" loading="lazy" width="375" height="168">
+          <img class="after" src="img/kids3-after.jpg" alt="После: передние зубы в циркониевых коронках, жевательные в металлических" loading="lazy" width="375" height="165">
+          <input type="range" min="0" max="100" value="50" aria-label="Сравнить до и после">
+          <span class="handle"></span><span class="tag l">До</span><span class="tag r">После</span>
+        </div>
+        <figcaption>Передние зубы в циркониевых коронках, жевательные в металлических. Прослужат до смены молочных зубов.</figcaption>
+      </figure>
+      <figure>
+        <div class="ba">
+          <img src="img/kids4-before.jpg" alt="До: верхние зубы почти разрушены" loading="lazy" width="318" height="228">
+          <img class="after" src="img/kids4-after.jpg" alt="После: восстановленные верхние зубы" loading="lazy" width="352" height="252">
+          <input type="range" min="0" max="100" value="50" aria-label="Сравнить до и после">
+          <span class="handle"></span><span class="tag l">До</span><span class="tag r">После</span>
+        </div>
+        <figcaption>Верхние зубы были почти разрушены. Лучше лечить вовремя, чем ждать, пока заболит.</figcaption>
+      </figure>
+    </div>
+
+    <div class="kids-quotes">
+      <blockquote>
+        <p class="kz">«Бүгін қызымыздың тісін емдедік, дәрігерлер өте жоғары деңгейде жұмыс істеді. Баламен тіл табысуларыда өте керемет, қызымның бір дауысы шықпады.»</p>
+        <p class="ru">Сегодня лечили зубы дочке. Врачи нашли с ней общий язык, она ни разу не заплакала. Спасибо Зарине Николаевне и анестезиологу Канагату Таубаевичу. Теперь приведём сына.</p>
+        <cite>Мама пациентки, отзыв в 2ГИС</cite>
+      </blockquote>
+      <blockquote>
+        <p class="kz">«3,5 сағатқа ұйықтатып барлық тістерін емдеп берді. Шүкір, қазір барлығы жақсы, ойнап жүр.»</p>
+        <p class="ru">Усыпили на 3,5 часа и вылечили все зубы. Сейчас всё хорошо, играет. Пока дочка не проснулась, врач приготовил ей игрушки.</p>
+        <cite>Мама пациентки, отметка в Instagram</cite>
+      </blockquote>
+    </div>
+
+    <a class="btn btn-wa" href="https://wa.me/77472519595?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%20%D1%80%D0%B5%D0%B1%D1%91%D0%BD%D0%BA%D0%B0%20%D0%BD%D0%B0%20%D0%BB%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BF%D0%BE%D0%B4%20%D1%81%D0%B5%D0%B2%D0%BE%D1%80%D0%B0%D0%BD%D0%BE%D0%BC" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Записать ребёнка на консультацию</a>
+  </div>
+</section>
+
+<section id="works">
+  <div class="wrap">
+    <h2>Работы наших врачей</h2>
+    <p class="lead">Снимки пациентов до и после лечения из Instagram клиники.</p>
+    <div class="works">
+      <figure class="wide">
+        <div class="ba">
+          <img src="img/allon6-before.jpg" alt="До: на обеих челюстях стоят импланты, зубов нет" loading="lazy" width="591" height="320">
+          <img class="after" src="img/allon6-after.jpg" alt="После: на имплантах закреплены протезы на обе челюсти" loading="lazy" width="591" height="300">
+          <input type="range" min="0" max="100" value="50" aria-label="Сравнить до и после">
+          <span class="handle"></span><span class="tag l">До</span><span class="tag r">После</span>
+        </div>
+        <figcaption><b>All-on-6: обе челюсти на шести имплантах</b><span>Омаржан Алдабергенович</span></figcaption>
+      </figure>
+      <figure>
+        <div class="ba">
+          <img src="img/rehab-before.jpg" alt="До: жёлтые разрушенные зубы, часть зубов отсутствует" loading="lazy" width="290" height="230">
+          <img class="after" src="img/rehab-after.jpg" alt="После: ровный ряд белых зубов" loading="lazy" width="290" height="230">
+          <input type="range" min="0" max="100" value="50" aria-label="Сравнить до и после">
+          <span class="handle"></span><span class="tag l">До</span><span class="tag r">После</span>
+        </div>
+        <figcaption><b>Полное восстановление верхних зубов</b><span>Абдували Хаятуллаевич</span></figcaption>
+      </figure>
+      <figure>
+        <div class="ba">
+          <img src="img/resto-before.jpg" alt="До: передние зубы разного цвета и формы" loading="lazy" width="591" height="270">
+          <img class="after" src="img/resto-after.jpg" alt="После: передние зубы одного цвета и ровной формы" loading="lazy" width="591" height="270">
+          <input type="range" min="0" max="100" value="50" aria-label="Сравнить до и после">
+          <span class="handle"></span><span class="tag l">До</span><span class="tag r">После</span>
+        </div>
+        <figcaption><b>Реставрация передних зубов</b><span>Абдували Хаятуллаевич</span></figcaption>
+      </figure>
+      <figure>
+        <div class="ba">
+          <img src="img/veneers-before.jpg" alt="До: передние зубы с пятнами и неровными краями" loading="lazy" width="440" height="250">
+          <img class="after" src="img/veneers-after.jpg" alt="После: белые ровные виниры" loading="lazy" width="440" height="250">
+          <input type="range" min="0" max="100" value="50" aria-label="Сравнить до и после">
+          <span class="handle"></span><span class="tag l">До</span><span class="tag r">После</span>
+        </div>
+        <figcaption><b>Виниры на улыбку</b><span>Работа врача клиники</span></figcaption>
+      </figure>
+      <div class="works-cta">
+        <h3>Хотите узнать, что можно сделать с вашими зубами?</h3>
+        <p>Напишите в WhatsApp, что беспокоит, можно приложить фото улыбки. Точный план лечения врач составит на бесплатной консультации.</p>
+        <a class="btn btn-wa" href="https://wa.me/77472519595" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Написать в WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="doctors">
+  <div class="wrap">
+    <h2>Врачи</h2>
+    <p class="lead">У каждого врача своя страница в Instagram клиники: там видео с приёмов и отзывы пациентов.</p>
+    <div class="docs">
+      <article class="doc">
+        <span class="mono" aria-hidden="true">АХ</span>
+        <div>
+          <h3>Абдуллаев Абдували Хаятуллаевич</h3>
+          <p class="role">Хирург-имплантолог, ортопед</p>
+          <p>Стаж 10 лет. Ставит импланты по методикам All-on-4 и All-on-6, делает синус-лифтинг, наращивает кость, ставит виниры. Ездит на конференции в Южную Корею и ОАЭ.</p>
+        </div>
+      </article>
+      <article class="doc">
+        <span class="mono" aria-hidden="true">ШБ</span>
+        <div>
+          <h3>Бейсен Шынгыс Алдабергенович</h3>
+          <p class="role">Челюстно-лицевой хирург, имплантолог</p>
+          <p>Берёт самые сложные случаи. Один из четырёх врачей в Астане, кто ставит скуловые импланты. Учился в Турции, Бразилии, Корее и России.</p>
+        </div>
+      </article>
+      <article class="doc">
+        <span class="mono" aria-hidden="true">ОА</span>
+        <div>
+          <h3>Омаржан Алдабергенович</h3>
+          <p class="role">Имплантолог</p>
+          <p>Делает полную реабилитацию челюсти: импланты и протез на всю дугу. Его работы есть в разделе выше.</p>
+        </div>
+      </article>
+      <article class="doc">
+        <span class="mono" aria-hidden="true">ЗН</span>
+        <div>
+          <h3>Зарина Николаевна</h3>
+          <p class="role">Детский стоматолог</p>
+          <p>Лечит детей, в том числе во сне под севораном. Прошла курсы по детской эндодонтии, терапии и ортопедии, по первой помощи при неотложных состояниях.</p>
+        </div>
+      </article>
+      <article class="doc">
+        <span class="mono" aria-hidden="true">СД</span>
+        <div>
+          <h3>Давронов Садулла Нусратович</h3>
+          <p class="role">Терапевт</p>
+          <p>Лечит кариес, пульпит и периодонтит, восстанавливает разрушенные зубы.</p>
+        </div>
+      </article>
+      <article class="doc">
+        <span class="mono" aria-hidden="true">БК</span>
+        <div>
+          <h3>Кенжалиев Биржан Ерденович</h3>
+          <p class="role">Стоматолог</p>
+          <p>Ведёт полное лечение зубов. Пациенты в отзывах пишут, что у него лёгкая рука.</p>
+        </div>
+      </article>
+      <article class="doc">
+        <span class="mono" aria-hidden="true">КТ</span>
+        <div>
+          <h3>Канагат Таубаевич</h3>
+          <p class="role">Анестезиолог</p>
+          <p>Готовит детей к лечению во сне и следит за ними, пока идёт лечение и пока ребёнок просыпается.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="reviews">
+  <div class="wrap">
+    <div class="rev-head">
+      <div>
+        <h2>Что пишут пациенты</h2>
+        <p class="lead">Больше 900 отзывов о клинике в 2ГИС. Несколько из них:</p>
+      </div>
+      <a class="btn btn-line" href="https://2gis.kz/astana/search/All%20Dent%20%D0%9C%D1%83%D1%85%D0%B0%D0%BC%D0%B5%D0%B4%D1%85%D0%B0%D0%BD%D0%BE%D0%B2%D0%B0%206%D0%B0" target="_blank" rel="noopener">Все отзывы в 2ГИС</a>
+    </div>
+    <div class="rev-grid">
+      <blockquote class="rev">
+        <div class="stars" aria-label="5 из 5">★★★★★</div>
+        <p>Очень боялась стоматолога. На установку имплантов не решалась много лет. Сегодня прошёл заключительный этап. Абдували Хаятуллаевич подробно объяснял каждую стадию и отвечал на все мои вопросы.</p>
+        <cite><b>Наталья К.</b>, импланты</cite>
+      </blockquote>
+      <blockquote class="rev">
+        <div class="stars" aria-label="5 из 5">★★★★★</div>
+        <p>Мама очень переживала перед процедурой, но всё прошло спокойно и без стресса. Результат замечательный, мы все очень довольны.</p>
+        <cite><b>М.</b>, имплант маме, врач Омаржан Алдабергенович</cite>
+      </blockquote>
+      <blockquote class="rev">
+        <div class="stars" aria-label="5 из 5">★★★★★</div>
+        <p>Мы у Абдували Хаятуллаевича лечимся и наблюдаемся с 2020 года всей семьёй.</p>
+        <cite><b>Жанара Б.</b></cite>
+      </blockquote>
+      <blockquote class="rev">
+        <div class="stars" aria-label="5 из 5">★★★★★</div>
+        <p>Сегодня завершилось моё полное лечение зубов. Все процедуры проходили практически без боли. Отдельное спасибо ассистенту, очень вежливый и внимательный.</p>
+        <cite><b>Мадина А.</b>, врач Биржан Ерденович</cite>
+      </blockquote>
+      <blockquote class="rev">
+        <div class="stars" aria-label="5 из 5">★★★★★</div>
+        <p>Жалпы стоматологияға деген қорқынышымды жойған жер. Ауыртпашылық сездірмей емдеді, бағасы қолжетімді.</p>
+        <p class="tr">Здесь у меня пропал страх перед стоматологией. Лечили без боли, цены доступные.</p>
+        <cite><b>Лора А.</b>, врач Садулла Нусратович</cite>
+      </blockquote>
+      <blockquote class="rev">
+        <div class="stars" aria-label="5 из 5">★★★★★</div>
+        <p>Все процедуры были подробно объяснены, лечение прошло аккуратно и безболезненно, что для меня было очень важно.</p>
+        <cite><b>Грант К.</b>, врач Биржан Ерденович</cite>
+      </blockquote>
+      <blockquote class="rev">
+        <div class="stars" aria-label="5 из 5">★★★★★</div>
+        <p>Сейчас прохожу лечение у Зарины Николаевны. Всегда внимательна и аккуратна, лечение проходит спокойно и безболезненно.</p>
+        <cite><b>Еркежан К.</b></cite>
+      </blockquote>
+      <blockquote class="rev">
+        <div class="stars" aria-label="5 из 5">★★★★★</div>
+        <p>Спасибо за заботу о зубах моей дочки, результаты лечения превзошли все ожидания.</p>
+        <cite><b>Suhrob I.</b>, врач Садулла Нусратович</cite>
+      </blockquote>
+      <blockquote class="rev">
+        <div class="stars" aria-label="5 из 5">★★★★★</div>
+        <p>Хочу сказать спасибо Айгерим Буркутовне. С самого начала смогла полностью доверить ей своё лечение и ни разу не пожалела. Всегда можно задать любой вопрос и сразу получить ответ.</p>
+        <cite><b>Meruyert T.</b></cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <h2>Частые вопросы</h2>
+    <div class="faq">
+      <details>
+        <summary>Сколько стоит консультация?</summary>
+        <p>Консультация бесплатная. Врач осмотрит зубы, при необходимости сделает снимок и расскажет план лечения с ценой.</p>
+      </details>
+      <details>
+        <summary>Что такое лечение под севораном и безопасно ли это?</summary>
+        <p>Севоран это газ для наркоза: ребёнок вдыхает его через маску и засыпает. Перед лечением сдают анализы и делают ЭКГ, это бесплатно. Анестезиолог смотрит результаты и ещё раз осматривает ребёнка в день лечения, а во время сна следит за пульсом и дыханием. Просыпается ребёнок рядом с родителями.</p>
+      </details>
+      <details>
+        <summary>Сколько стоит лечение во сне?</summary>
+        <p>Первый час сна стоит 15 000 тг. Лечение зубов оплачивается отдельно, врач назовёт цену после осмотра.</p>
+      </details>
+      <details>
+        <summary>Сколько служат импланты?</summary>
+        <p>В среднем от 10 до 30 лет. Некоторые производители дают на импланты пожизненную гарантию. Какую систему выбрать, врач подскажет на консультации.</p>
+      </details>
+      <details>
+        <summary>Что делать, если своей кости для импланта мало?</summary>
+        <p>Кость можно нарастить или сделать синус-лифтинг. В сложных случаях ставят скуловые импланты: в Астане это делают всего несколько врачей, один из них работает у нас.</p>
+      </details>
+      <details>
+        <summary>Можно оплатить в рассрочку?</summary>
+        <p>Да, через Kaspi в рассрочку 0-0-24. Условия уточните у администратора.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="contacts">
+  <div class="wrap">
+    <h2>Запись и адрес</h2>
+    <div class="contact-grid">
+      <div>
+        <ul class="c-list">
+          <li><span>Адрес</span><strong>Астана, ул. Кайым Мухамедханов, 6а</strong></li>
+          <li><span>Телефон и WhatsApp</span><a href="tel:+77472519595">+7 747 251 95 95</a></li>
+          <li><span>Instagram</span><a href="https://instagram.com/alldent.kz" target="_blank" rel="noopener">@alldent.kz</a></li>
+        </ul>
+        <iframe class="map" title="Карта: All Dent, ул. Кайым Мухамедханов, 6а" loading="lazy" src="https://maps.google.com/maps?q=%D0%90%D1%81%D1%82%D0%B0%D0%BD%D0%B0%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%9A%D0%B0%D0%B9%D1%8B%D0%BC%20%D0%9C%D1%83%D1%85%D0%B0%D0%BC%D0%B5%D0%B4%D1%85%D0%B0%D0%BD%D0%BE%D0%B2%206%D0%B0&z=16&output=embed"></iframe>
+      </div>
+      <form id="book" novalidate>
+        <h3>Записаться на консультацию</h3>
+        <p class="note">Заявка откроется в WhatsApp клиники. Администратор ответит и подберёт время.</p>
+        <div class="field">
+          <label for="f-name">Имя</label>
+          <input id="f-name" name="name" autocomplete="name" required>
+          <p class="err">Напишите, как к вам обращаться</p>
+        </div>
+        <div class="field">
+          <label for="f-phone">Телефон</label>
+          <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 7__ ___ __ __" required>
+          <p class="err">Укажите номер, чтобы администратор мог перезвонить</p>
+        </div>
+        <div class="field">
+          <label for="f-svc">Что беспокоит</label>
+          <select id="f-svc" name="svc">
+            <option>Консультация</option>
+            <option>Имплантация</option>
+            <option>Протезы и виниры</option>
+            <option>Лечение зубов</option>
+            <option>Лечение ребёнка во сне</option>
+            <option>Брекеты</option>
+            <option>Удаление зуба</option>
+            <option>Отбеливание</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-msg">Комментарий, если нужно</label>
+          <textarea id="f-msg" name="msg"></textarea>
+        </div>
+        <button class="btn btn-wa" type="submit"><svg aria-hidden="true"><use href="#i-wa"/></svg>Отправить в WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>All Dent, стоматология. Астана, ул. Кайым Мухамедханов, 6а</span>
+    <span><a href="tel:+77472519595">+7 747 251 95 95</a> · <a href="https://instagram.com/alldent.kz" target="_blank" rel="noopener">Instagram</a></span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/77472519595" target="_blank" rel="noopener" aria-label="Написать в WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+
+<script>
+document.querySelectorAll('.ba').forEach(function (box) {
+  var r = box.querySelector('input');
+  function set() { box.style.setProperty('--pos', r.value + '%'); }
+  r.addEventListener('input', set);
+  set();
+});
+
+document.getElementById('book').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var f = e.target, ok = true;
+  ['name', 'phone'].forEach(function (n) {
+    var el = f.elements[n], field = el.closest('.field');
+    var bad = n === 'phone' ? el.value.replace(/\D/g, '').length < 10 : !el.value.trim();
+    field.classList.toggle('bad', bad);
+    if (bad && ok) { el.focus(); ok = false; }
+  });
+  if (!ok) return;
+  var text = 'Здравствуйте! Хочу записаться.\nИмя: ' + f.elements.name.value.trim() +
+    '\nТелефон: ' + f.elements.phone.value.trim() +
+    '\nУслуга: ' + f.elements.svc.value +
+    (f.elements.msg.value.trim() ? '\nКомментарий: ' + f.elements.msg.value.trim() : '');
+  window.open('https://wa.me/77472519595?text=' + encodeURIComponent(text), '_blank', 'noopener');
+});
+</script>
+</body>
+</html>
